@@ -6,54 +6,59 @@ Given a word or a phrase, the program tries to write it using as letters only th
 ## Examples
 
 ```
+Testo:
 carbonio
 c (carbonio)
-ar (argon)
+ | ar (argon)
  |  | b (boro)
  |  |  | o (ossigeno)
  |  |  |  | n (azoto)
  |  |  |  |  | i (iodio)
  |  |  |  |  |  | o (ossigeno)
- |  |  |  | ni (nickel)
+ |  |  |  |  | ni (nickel)
  |  |  |  |  |  | o (ossigeno)
-ca (calcio)
- | rb (rubidio)
+ | ca (calcio)
+ |  | rb (rubidio)
  |  |  | o (ossigeno)
  |  |  |  | n (azoto)
  |  |  |  |  | i (iodio)
  |  |  |  |  |  | o (ossigeno)
- |  |  |  | ni (nickel)
+ |  |  |  |  | ni (nickel)
  |  |  |  |  |  | o (ossigeno)
 
+
+Testo:
 ossigeno
 o (ossigeno)
  | s (zolfo)
  |  | s (zolfo)
  |  |  | i (iodio)
- |  |  | ge (germanio)
+ |  |  |  | ge (germanio)
  |  |  |  |  | n (azoto)
  |  |  |  |  |  | o (ossigeno)
- |  |  |  |  | no (nobelio)
- |  | si (silicio)
- |  |  | ge (germanio)
+ |  |  |  |  |  | no (nobelio)
+ |  |  | si (silicio)
+ |  |  |  | ge (germanio)
  |  |  |  |  | n (azoto)
  |  |  |  |  |  | o (ossigeno)
- |  |  |  |  | no (nobelio)
-os (osmio)
+ |  |  |  |  |  | no (nobelio)
+ | os (osmio)
  |  | s (zolfo)
  |  |  | i (iodio)
- |  |  | ge (germanio)
+ |  |  |  | ge (germanio)
  |  |  |  |  | n (azoto)
  |  |  |  |  |  | o (ossigeno)
- |  |  |  |  | no (nobelio)
- |  | si (silicio)
- |  |  | ge (germanio)
+ |  |  |  |  |  | no (nobelio)
+ |  |  | si (silicio)
+ |  |  |  | ge (germanio)
  |  |  |  |  | n (azoto)
  |  |  |  |  |  | o (ossigeno)
- |  |  |  |  | no (nobelio)
+ |  |  |  |  |  | no (nobelio)
 
+
+Testo:
 amore
 am (americio)
  | o (ossigeno)
- | re (renio) 
+ |  | re (renio)
 ```
