@@ -12,7 +12,7 @@ typedef struct{
     char nome[N];
 }Elemento;
 
-void printable(char str[]);
+void printable(char str[], int count);
 Elemento elementi[EL]; // globale
 
 int main(){
@@ -41,23 +41,18 @@ int main(){
     do{
         printf("\n\nTesto: \n");
         gets(str);
-        printable(str);
+        printable(str,0);
     }while(str[0]!='\0');
     fclose(pt);
     return 0;
 }
 
 
-void printable(char str[]){
+void printable(char str[], int count){
     int i,found,finito=0;
-
-    if(str[0]=='\0'){
-    // printf("Fine\n");
-        finito=1;
-    }
-    else if(str[0]==' '){
-        printf("\n");
-        printable(&str[1]);
+    if(str[0]==' '){
+        printf(" |\n");
+        printable(&str[1], count);
     }
     else{
         if(!finito){
@@ -66,9 +61,11 @@ void printable(char str[]){
             for(i=0;i<EL && found==0;i++){
                 if( str[0]==elementi[i].simbolo[0] && elementi[i].simbolo[1]=='\0' ){
                     found=i;
+                    for(int k=0; k<count; k++)
+                        printf(" | ");
                     printf("%s (%s)\n",elementi[found].simbolo,elementi[found].nome);
                     if(str[1]!='\0')
-                        printable(&str[1]);
+                        printable(&str[1], ++count);
                 }
             }
             // due lettere
@@ -77,9 +74,11 @@ void printable(char str[]){
                 if( str[1]!='\0'){
                     if( str[0]==elementi[i].simbolo[0] && str[1]==elementi[i].simbolo[1] && elementi[i].simbolo[1]!='\0' ){
                         found=i;
+                        for(int k=1; k<count; k++)
+                            printf(" | ");
                         printf("%s (%s)\n",elementi[found].simbolo,elementi[found].nome);
                         if(str[2]!='\0')
-                            printable(&str[2]);
+                            printable(&str[2],++count);
                     }
                 }
             }
