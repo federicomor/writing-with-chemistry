@@ -8,7 +8,7 @@
 
 typedef struct{
     int numero_atomico;
-	char simbolo[N];
+    char simbolo[N];
     char nome[N];
 }Elemento;
 
@@ -74,7 +74,7 @@ void printable(char str[], int count){
                 if( str[1]!='\0'){
                     if( str[0]==elementi[i].simbolo[0] && str[1]==elementi[i].simbolo[1] && elementi[i].simbolo[1]!='\0' ){
                         found=i;
-                        for(int k=1; k<count; k++)
+                        for(int k=0; k<count; k++)
                             printf(" | ");
                         printf("%s (%s)\n",elementi[found].simbolo,elementi[found].nome);
                         if(str[2]!='\0')
