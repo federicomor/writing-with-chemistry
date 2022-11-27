@@ -3,7 +3,7 @@
 #include<stdlib.h>
 
 #define N 20
-#define EL 119
+#define EL 118
 #define Len 100
 
 typedef struct{
@@ -13,12 +13,14 @@ typedef struct{
 }Elemento;
 
 void printable(char str[], int count);
+void show_end(int k);
 Elemento elementi[EL]; // globale
 
 int main(){
 
     FILE * pt;
-    pt=fopen("tavolach.txt","r");
+    // pt=fopen("chem_table_ita.txt","r");
+    pt=fopen("chem_table_eng.txt","r");
     int i;
     char nom[N],simb[N];
     int num;
@@ -35,11 +37,11 @@ int main(){
     }
 
     for(i=0;i<EL;i++){
-            printf("Nome: %12s, \tSimbolo: %5s, \tNumero: %5d\n",elementi[i].nome,elementi[i].simbolo,elementi[i].numero_atomico);
+            printf("Name: %12s, \tSymbol: %5s, \tNumber: %5d\n",elementi[i].nome,elementi[i].simbolo,elementi[i].numero_atomico);
     }
 
     do{
-        printf("\n\nTesto: \n");
+        printf("\n\nText: \n");
         gets(str);
         printable(str,0);
     }while(str[0]!='\0');
@@ -66,6 +68,8 @@ void printable(char str[], int count){
                     printf("%s (%s)\n",elementi[found].simbolo,elementi[found].nome);
                     if(str[1]!='\0')
                         printable(&str[1], ++count);
+                    else
+                        show_end(count);
                 }
             }
             // due lettere
@@ -79,10 +83,18 @@ void printable(char str[], int count){
                         printf("%s (%s)\n",elementi[found].simbolo,elementi[found].nome);
                         if(str[2]!='\0')
                             printable(&str[2],++count);
+                        else
+                            show_end(count);
                     }
                 }
             }
         }
     }
 
+}
+
+void show_end(int k){
+    for(int i=0; i<k; i++)
+        printf(" | ");
+    printf("| -> END \n");
 }

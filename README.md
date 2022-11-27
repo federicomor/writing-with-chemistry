@@ -6,59 +6,68 @@ Given a word or a phrase, the program tries to write it using as letters only th
 ## Examples
 
 ```
-Testo:
-carbonio
-c (carbonio)
- | ar (argon)
- |  | b (boro)
- |  |  | o (ossigeno)
- |  |  |  | n (azoto)
- |  |  |  |  | i (iodio)
- |  |  |  |  |  | o (ossigeno)
- |  |  |  |  | ni (nickel)
- |  |  |  |  |  | o (ossigeno)
- | ca (calcio)
- |  | rb (rubidio)
- |  |  | o (ossigeno)
- |  |  |  | n (azoto)
- |  |  |  |  | i (iodio)
- |  |  |  |  |  | o (ossigeno)
- |  |  |  |  | ni (nickel)
- |  |  |  |  |  | o (ossigeno)
-
-
-Testo:
+Text:
 ossigeno
-o (ossigeno)
- | s (zolfo)
- |  | s (zolfo)
- |  |  | i (iodio)
- |  |  |  | ge (germanio)
- |  |  |  |  | n (azoto)
- |  |  |  |  |  | o (ossigeno)
- |  |  |  |  |  | no (nobelio)
- |  |  | si (silicio)
- |  |  |  | ge (germanio)
- |  |  |  |  | n (azoto)
- |  |  |  |  |  | o (ossigeno)
- |  |  |  |  |  | no (nobelio)
- | os (osmio)
- |  | s (zolfo)
- |  |  | i (iodio)
- |  |  |  | ge (germanio)
- |  |  |  |  | n (azoto)
- |  |  |  |  |  | o (ossigeno)
- |  |  |  |  |  | no (nobelio)
- |  |  | si (silicio)
- |  |  |  | ge (germanio)
- |  |  |  |  | n (azoto)
- |  |  |  |  |  | o (ossigeno)
- |  |  |  |  |  | no (nobelio)
+o (oxygen)
+ | s (sulfur)
+ |  | s (sulfur)
+ |  |  | i (iodine)
+ |  |  |  | ge (germanium)
+ |  |  |  |  | n (nitrogen)
+ |  |  |  |  |  | o (oxygen)
+ |  |  |  |  |  | | -> END
+ |  |  |  |  |  | no (nobelium)
+ |  |  |  |  |  | | -> END
+ |  |  | si (silicon)
+ |  |  |  | ge (germanium)
+ |  |  |  |  | n (nitrogen)
+ |  |  |  |  |  | o (oxygen)
+ |  |  |  |  |  | | -> END
+ |  |  |  |  |  | no (nobelium)
+ |  |  |  |  |  | | -> END
+ | os (osmium)
+ |  | s (sulfur)
+ |  |  | i (iodine)
+ |  |  |  | ge (germanium)
+ |  |  |  |  | n (nitrogen)
+ |  |  |  |  |  | o (oxygen)
+ |  |  |  |  |  | | -> END
+ |  |  |  |  |  | no (nobelium)
+ |  |  |  |  |  | | -> END
+ |  |  | si (silicon)
+ |  |  |  | ge (germanium)
+ |  |  |  |  | n (nitrogen)
+ |  |  |  |  |  | o (oxygen)
+ |  |  |  |  |  | | -> END
+ |  |  |  |  |  | no (nobelium)
+ |  |  |  |  |  | | -> END
 
 
-Testo:
-amore
-am (americio)
- | o (ossigeno)
- |  | re (renio)
+Text:
+carbon
+c (carbon)
+ | ar (argon)
+ |  | b (boron)
+ |  |  | o (oxygen)
+ |  |  |  | n (nitrogen)
+ |  |  |  | | -> END
+ | ca (calcium)
+ |  | rb (rubidium)
+ |  |  | o (oxygen)
+ |  |  |  | n (nitrogen)
+ |  |  |  | | -> END
+
+
+Text:
+arsenic
+ar (argon)
+ | s (sulfur)
+ |  | se (selenium)
+ |  |  | n (nitrogen)
+ |  |  |  | i (iodine)
+ |  |  |  |  | c (carbon)
+ |  |  |  |  | | -> END
+ |  |  |  | ni (nickel)
+ |  |  |  |  | c (carbon)
+ |  |  |  |  | | -> END   
 ```
